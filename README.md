@@ -87,7 +87,7 @@ pip install -r requirements.txt
 - `--overwrite_output_dir` — overwrite outputs if they exist
 - `--output_dir` — directory for training logs and checkpoints
 
-### ▶️ Part 1 Example Usage
+**▶️ Part 1 Example Usage**
 
 ```
 tochrun train_bs_part1.py \
@@ -133,7 +133,7 @@ tochrun train_bs_part1.py \
 - `--data_path` — path to training dataset
 - `--data_length` — number of samples to use for training
 
-### ▶️ Part 2 Example Usage
+**▶️ Part 2 Example Usage**
 ```
 torchrun train_bs_math_p2.py \
   --model_name_or_path <model_path> \
@@ -165,9 +165,9 @@ torchrun train_bs_math_p2.py \
  ```
 <a id="results"></a>
 ## 💪 What Basel Delivers
-### 1. Mathematical Reasoning Task
+**1. Mathematical Reasoning Task**
 ![](img/basel_math_7b.jpeg)
-### 2. Language Modeling Task
+**2. Language Modeling Task**
 ![](img/basel_ppl.jpeg)
 
 <a id="citation"></a>
