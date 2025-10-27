@@ -12,7 +12,6 @@ from torch.distributed.fsdp import FullStateDictConfig, StateDictType
 from torch.distributed.fsdp import FullyShardedDataParallel
 import torch.distributed as dist
 
-
 class BSLinear(nn.Module):
     def __init__(self, U, Vh, S, additional_dim, bias=None) -> None:
         super(BSLinear, self).__init__()
