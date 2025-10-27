@@ -65,7 +65,7 @@ pip install -r requirements.txt
 ## 🧩 Basel Part 1: Compression
 
 <!-- ![](img/part1.png) -->
-**Compression code**   [`train_bs_part1.py`](./train_bs_part1.py)
+**Compression code**   [`train_bs_part1.py`](./train_bs_math_p1.py)
 
 **ModelArguments**
 - `--model_name_or_path` — name or path of pretrained model to compress
@@ -121,7 +121,7 @@ tochrun train_bs_part1.py \
 ```
 <a id="part2"></a>
 ## 🚀  Basel Part 2: Finetuning + Decompression
-**Fine-tuning + decompression code**   [`train_bs_part2.py`](./train_bs_part2.py)
+**Fine-tuning + decompression code**   [`train_bs_part2.py`](./train_bs_math_p2.py)
 
 **ModelArguments**
 - `--model_name_or_path` — pretrained model to load (same base as Part 1)
