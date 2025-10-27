@@ -27,7 +27,7 @@ Basel plays well with other compression methods and often beats them at their ow
 
 🔸 Basel with 8-bit achieves better accuracy than 4-bit quantization
 
-🔸 Basel outperforms pruning-based compression methods such as Wanda and FLAP
+🔸 Basel outperforms SOTA low-rank and pruning-based compression methods
 
 🔸 Models compressed with Basel remain stable under deeper compression levels where pruning accuracy collapses.
 
