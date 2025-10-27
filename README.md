@@ -165,9 +165,11 @@ torchrun train_bs_math_p2.py \
  ```
 <a id="results"></a>
 ## 💪 What Basel Delivers
-**1. Mathematical Reasoning Task**
+### 1. Mathematical Reasoning Task
 ![](img/basel_math_7b.jpeg)
-**2. Language Modeling Task**
+### 1. Programming Task
+![](img/basel_7b_prog.jpeg)
+### 2. Language Modeling Task
 ![](img/basel_ppl.jpeg)
 
 <a id="citation"></a>
