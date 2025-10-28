@@ -5,13 +5,13 @@
     <td align="center" width="50%">
       <!-- <img src="https://github.com/jerryyangli.png" width="120" height="120" style="border-radius:50%;"><br><br> -->
       <b>Dr. Yang Li</b><br>
-      <i>Department of Computer Science • Iowa State University</i><br>
+      <i>Department of Computer Science, Iowa State University</i><br>
       <a href="https://jerryyangli.github.io/">Website</a>
     </td>
     <td align="center" width="50%">
       <!-- <img src="https://github.com/carozy797.png" width="120" height="120" style="border-radius:50%;"><br><br> -->
       <b>Daniel Agyei Asante</b><br>
-      <i>Department of Computer Science • Iowa State University</i><br>
+      <i>Department of Computer Science, Iowa State University</i><br>
       <a href="https://carozy797.github.io/">Website</a>
     </td>
   </tr>
