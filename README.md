@@ -22,13 +22,13 @@
 ## 📖 Streamlining Language Models via Semantic Basis Analysis
 ### 📃 <a href="https://arxiv.org/pdf/2405.15877" target="_blank">Paper</a>
 
-**Basel** is is a principled low rank compression framework designed to operate directly on the semantic structure of large language model weight matrices. It identifies the bases that encode high-impact semantic features for the target task and removes those with negligible contribution. This reduces parameters, memory footprint, and inference costs while preserving task accuracy. Basel achieves up to 2.7× model size reduction compared to state-of-the-art techniques and enables efficient deployment of language models on edge devices and in cost-sensitive environments.
+**Basel** is a principled low-rank compression framework designed to operate directly on the semantic structure of large language model weight matrices. It identifies the bases that encode high-impact semantic features for the target task and removes those with negligible contribution. This reduces weight parameters and memory footprint and improves inference throughput while preserving task accuracy. Basel achieves up to 2.7× model size reduction compared to state-of-the-art techniques and enables efficient deployment of language models on edge devices and in cost-sensitive environments.
 Basel is validated across mathematical reasoning (GSM8K, MATH), code generation (HumanEval, MBPP), and on language modeling (WikiText-2).
 Basel plays well with other compression methods and often beats them at their own game.
 
 🔸 Basel with 8-bit achieves better accuracy than 4-bit quantization
 
-🔸 Basel outperforms SOTA low-rank and pruning-based compression methods
+🔸 Basel outperforms many existing low-rank and pruning-based compression methods
 
 🔸 Models compressed with Basel remain stable under deeper compression levels where pruning accuracy collapses.
 
