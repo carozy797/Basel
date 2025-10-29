@@ -65,6 +65,8 @@ pip install -r requirements.txt
 <a id="part1"></a>
 ## 🧩 Basel Part 1: Compression
 
+Part 1 takes a dense model as input and generates a low-rank factorized model together with a dimension file specifying the shapes of its weight matrices.
+
 <!-- ![](img/part1.png) -->
 **Compression code**   [`train_bs_part1.py`](./train_bs_math_p1.py)
 
@@ -122,6 +124,9 @@ tochrun train_bs_part1.py \
 ```
 <a id="part2"></a>
 ## 🚀  Basel Part 2: Finetuning + Decompression
+
+Part 2 takes the factorized model and dimension file as input, fine-tunes the factorized model, and decompresses it back into an equivalent dense model. The decompressed dense model is produced solely for convenient performance evaluation.
+
 **Fine-tuning + decompression code**   [`train_bs_part2.py`](./train_bs_math_p2.py)
 
 **ModelArguments**
