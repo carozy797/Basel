@@ -125,7 +125,7 @@ tochrun train_bs_part1.py \
 <a id="part2"></a>
 ## 🚀  Basel Part 2: Finetuning + Decompression
 
-Part 2 takes the factorized model and dimension file as input, fine-tunes the factorized model, and decompresses it back into an equivalent dense model. The decompressed dense model is produced solely for convenient performance evaluation.
+Part 2 takes the factorized model and dimension file as input, fine-tunes the factorized model, and decompresses it into an equivalent dense model. The decompressed dense model is generated solely to facilitate convenient performance evaluation of the fine-tuned low-rank model.
 
 **Fine-tuning + decompression code**   [`train_bs_part2.py`](./train_bs_math_p2.py)
 
