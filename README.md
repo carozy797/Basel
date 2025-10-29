@@ -177,10 +177,10 @@ torchrun train_bs_math_p2.py \
 ## 📝 Citation
 ```
 @article{basel,
-      title={{Basis Selection: Low-Rank Decomposition of Pretrained Large Language Models for Target Applications}}, 
-      author={Yang Li and Daniel Agyei Asante and Changsheng Zhao and Ernie Chang and Yangyang Shi and Vikas Chandra},
-      year={2024},
-      journal={arXiv preprint arXiv:2405.15877}, 
+      title={{Streamlining Language Models via Semantic Basis Analysis}}, 
+      author={Li, Yang and Asante, Daniel Agyei and Zhao, Changsheng and Chang, Ernie and Shi, Yangyang and Chandra, Vikas},
+      journal={Transactions on Machine Learning Research}, 
+      year={2025},
 }
 ```
 </p>
