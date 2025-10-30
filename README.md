@@ -187,6 +187,13 @@ torchrun train_bs_math_p2.py \
       journal={Transactions on Machine Learning Research}, 
       year={2025},
 }
+
+@article{basis_selection,
+      title={{Basis Selection: Low-Rank Decomposition of Pretrained Large Language Models for Target Applications}}, 
+      author={Yang Li and Daniel Agyei Asante and Changsheng Zhao and Ernie Chang and Yangyang Shi and Vikas Chandra},
+      year={2024},
+      journal={arxiv preprint arXiv:2405.15877}, 
+}
 ```
 </p>
  
