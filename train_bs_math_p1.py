@@ -52,12 +52,12 @@ def seed_everything(seed=42):
 @dataclass
 class ModelArguments:
     model_name_or_path: Optional[str] = field(default="facebook/opt-125m")
-    output_directory: str = field(default=None, metadata={"help": "Path to the directory containing the factorized model and dim.json."})
+    output_directory: str = field(default=None, metadata={"help": "default"})
     use_fast_tokenizer: bool = field(default=True)
     
 @dataclass
 class DataArguments:
-    data_path: str = field(default=None, metadata={"help": "Path to the training data."})
+    data_path: str = field(default=None, metadata={"help": "default"})
 
 @dataclass
 class TrainingArguments(transformers.TrainingArguments):
@@ -65,24 +65,24 @@ class TrainingArguments(transformers.TrainingArguments):
     optim: str = field(default="adamw_torch")
     model_max_length: int = field(
         default=512,
-        metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},
+        metadata={"help": "default"},
     )
     overwrite_output_dir: bool = field(default=True)
     bs_keeping_epoch: int = field(
         default=1,
-        metadata={"help": "The number of finetuning epochs before the basis selection starts"},
+        metadata={"help": "default"},
     )
     basis_selection_threshold: float = field(
         default=50,
-        metadata={"help": "The ratio of the sum of kept singular values"},
+        metadata={"help": "default"},
     )
     bs_additional_dim: int = field(
         default=32,
-        metadata={"help": "The additional dimension of basis selection layers"},
+        metadata={"help": "default"},
     )
     bs_shrinking_step: int = field(
         default=50,
-        metadata={"help": "The number of times pruning basis"},
+        metadata={"help": "default"},
     )
     output_dir: Optional[str] = field(default="./results")
     
