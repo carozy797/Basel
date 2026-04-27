@@ -57,13 +57,13 @@ def seed_everything(seed=42):
 @dataclass
 class ModelArguments:
     model_name_or_path: Optional[str] = field(default="facebook/opt-125m")
-    part_1_output_path: str = field(default=None, metadata={"help": "default"})
-    decompressed_model_path: str = field(default=None, metadata={"help": "default"})
+    part_1_output_path: str = field(default=None, metadata={"help": "Path to the directory containing the model and dim.json for part 1."})
+    decompressed_model_path: str = field(default=None, metadata={"help": "Path to save the final checkpoint after part 2"})
     use_fast_tokenizer: bool = field(default=False)
      
 @dataclass
 class DataArguments:
-    data_path: str = field(default=None, metadata={"help": "default"})
+    data_path: str = field(default=None, metadata={"help": "Path to the training data."})
 
 @dataclass
 class TrainingArguments(transformers.TrainingArguments):
@@ -71,7 +71,7 @@ class TrainingArguments(transformers.TrainingArguments):
     optim: str = field(default="adamw_torch")
     model_max_length: int = field(
         default=512,
-        metadata={"help": "default"},
+        metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},
     )
     overwrite_output_dir: bool = field(default=True)
     output_dir: Optional[str] = field(default="./results")
