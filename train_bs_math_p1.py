@@ -52,12 +52,12 @@ def seed_everything(seed=42):
 @dataclass
 class ModelArguments:
     model_name_or_path: Optional[str] = field(default="facebook/opt-125m")
-    output_directory: str = field(default=None, metadata={"help": "default"})
+    output_directory: str = field(default=None, metadata={"help": "Path to save part 1 checkpoint and dim"})
     use_fast_tokenizer: bool = field(default=True)
     
 @dataclass
 class DataArguments:
-    data_path: str = field(default=None, metadata={"help": "default"})
+    data_path: str = field(default=None, metadata={"help": "Path to the training data."})
 
 @dataclass
 class TrainingArguments(transformers.TrainingArguments):
@@ -65,24 +65,24 @@ class TrainingArguments(transformers.TrainingArguments):
     optim: str = field(default="adamw_torch")
     model_max_length: int = field(
         default=512,
-        metadata={"help": "default"},
+        metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},
     )
     overwrite_output_dir: bool = field(default=True)
     bs_keeping_epoch: int = field(
         default=1,
-        metadata={"help": "default"},
+        metadata={"help": "The number of finetuning epochs before the basis selection starts"},
     )
     basis_selection_threshold: float = field(
         default=50,
-        metadata={"help": "default"},
+        metadata={"help": "The ratio of the sum of kept singular values"},
     )
     bs_additional_dim: int = field(
         default=32,
-        metadata={"help": "default"},
+        metadata={"help": "The additional dimension of basis selection layers"},
     )
     bs_shrinking_step: int = field(
         default=50,
-        metadata={"help": "default"},
+        metadata={"help": "The number of times pruning basis"},
     )
     output_dir: Optional[str] = field(default="./results")
     
@@ -130,6 +130,7 @@ def safe_save_model_for_hf_trainer(trainer: transformers.Trainer, output_dir: st
         cpu_state_dict = {key: value.cpu() for key, value in state_dict.items()}
         del state_dict
         trainer._save(output_dir, state_dict=cpu_state_dict)  # noqa
+
 
 def smart_tokenizer_and_embedding_resize(
     special_tokens_dict: Dict,
