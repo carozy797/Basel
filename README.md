@@ -52,6 +52,12 @@ git clone https://github.com/Iowa-State-University-AI-System-Group/Basel.git
 cd Basel
 ```
 ### 2) Create & activate a virtual environment
+Using conda:
+```
+conda create -n basel python pip -y
+conda activate basel
+```
+
 ### 3) Install PyTorch
 ```
 pip install --index-url https://download.pytorch.org/whl/cu124 \
@@ -68,7 +74,14 @@ pip install -r requirements.txt
 Part 1 takes a dense model as input and generates a low-rank factorized model together with a dimension file specifying the shapes of its weight matrices.
 
 <!-- ![](img/part1.png) -->
-**Compression code**   [`train_bs_part1.py`](./train_bs_math_p1.py)
+**Compression code**   [`train_bs_p1.py`](./train_bs_p1.py)
+
+Example script: [`scripts/run_part1.sh`](./scripts/run_part1.sh)
+
+Update `<model-path>`, `<data-path>`, and `OUTPUT_DIR` in the script, then run:
+```
+./scripts/run_part1.sh
+```
 
 
 <a id="part2"></a>
@@ -76,7 +89,14 @@ Part 1 takes a dense model as input and generates a low-rank factorized model to
 
 Part 2 takes the factorized model and dimension file as input, fine-tunes the factorized model, and decompresses it into an equivalent dense model. The decompressed dense model is generated solely to facilitate convenient performance evaluation of the fine-tuned low-rank model.
 
-**Fine-tuning + decompression code**   [`train_bs_part2.py`](./train_bs_math_p2.py)
+**Fine-tuning + decompression code**   [`train_bs_p2.py`](./train_bs_p2.py)
+
+Example script: [`scripts/run_part2.sh`](./scripts/run_part2.sh)
+
+Update `<model-path>`, `<data-path>`, and `DECOMPRESSED_MODEL_DIR` in the script, then run:
+```
+./scripts/run_part2.sh
+```
 
 
 <a id="results"></a>
